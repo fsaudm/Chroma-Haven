@@ -1,3 +1,5 @@
+# Generate default colormaps available in Matplotlib
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -15,5 +17,6 @@ for ax, cmap in zip(axes.flatten(), cmaps):
     ax.set_title(cmap, fontsize=16)
     ax.axis('off')
 
+plt.tight_layout()
 fig.savefig('colormaps.png', dpi=500)
 plt.show()
